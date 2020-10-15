@@ -265,6 +265,8 @@ export default {
         },
         customBackend: {
           "localhost:25500 本地版": "http://localhost:25500/sub?",
+	  "turbosub.vercel.app 自用": "https://turbosub.vercel.app/sub?",
+	  "sub-web.wcc.best 薯条可用": "https://sub-web.wcc.best/sub?",
           "sub-beta.now.sh (自动编译最新版本后端-测试）": "https://sub-beta.now.sh/sub?",
           "subcon.dlj.tf(subconverter作者提供-稳定)":
             "https://subcon.dlj.tf/sub?",
@@ -273,6 +275,8 @@ export default {
         },
         backendOptions: [
           { value: "http://localhost:25500/sub?" },
+	  { value: "https://turbosub.vercel.app/sub?" },
+	  { value: "https://sub-web.wcc.best/sub?" },
           { value: "https://sub-beta.now.sh/sub?" },
           { value: "https://subcon.dlj.tf/sub?" },
           { value: "https://api.dler.io/sub?" },
@@ -585,7 +589,7 @@ export default {
   },
   mounted() {
     this.form.clientType = "clash&new_name=true";
-    this.form.customBackend = "https://sub-beta.now.sh/sub?";
+    this.form.customBackend = "https://turbosub.vercel.app/sub?";
     this.form.remoteConfig = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini";
     this.getBackendVersion();
   },
